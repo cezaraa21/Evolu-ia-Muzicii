@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Evoluția Muzicii 1960–1990</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Evoluția Muzicii Moderne</h1>
+<p>1960 — 1990</p>
+</header>
+
+<nav>
+<a href="index.html">Acasă</a>
+<a href="60s.html">Anii 60</a>
+<a href="70s.html">Anii 70</a>
+<a href="80s.html">Anii 80</a>
+<a href="90s.html">Anii 90</a>
+</nav>
+
+<section class="intro">
+
+<h2>Muzica și schimbarea culturii</h2>
+
+<p>
+Între anii 1960 și 1990 muzica populară s-a transformat radical.
+Rockul britanic, pop-ul global și scena alternativă au redefinit
+industria muzicală și cultura tinerilor.
+</p>
+
+</section>
+
+<section class="timeline">
+
+<h2>Linia cronologică</h2>
+
+<div class="line">
+
+<div class="event">
+<span>1960s</span>
+<p>The Beatles</p>
+</div>
+
+<div class="event">
+<span>1970s</span>
+<p>Fleetwood Mac</p>
+</div>
+
+<div class="event">
+<span>1980s</span>
+<p>Michael Jackson • Madonna • Sade</p>
+</div>
+
+<div class="event">
+<span>1990s</span>
+<p>No Doubt</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>Atestat Informatică – Evoluția Muzicii</p>
+</footer>
+
+<script src="timeline.js"></script>
+
+</body>
+</html>
+body{
+font-family: Helvetica, Arial, sans-serif;
+margin:0;
+background:#f4f4f4;
+color:#111;
+}
+
+header{
+text-align:center;
+padding:80px 20px;
+background:black;
+color:white;
+}
+
+header h1{
+font-size:50px;
+letter-spacing:2px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+background:white;
+padding:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+font-weight:bold;
+}
+
+.intro{
+max-width:800px;
+margin:auto;
+padding:60px 20px;
+text-align:center;
+}
+
+.timeline{
+padding:80px 20px;
+background:white;
+}
+
+.line{
+display:flex;
+justify-content:space-around;
+position:relative;
+margin-top:60px;
+}
+
+.event{
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
+.event span{
+font-size:24px;
+font-weight:bold;
+}
+
+.event.show{
+opacity:1;
+transform:translateY(0);
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+const events = document.querySelectorAll(".event");
+
+window.addEventListener("scroll", () => {
+
+events.forEach(event => {
+
+const position = event.getBoundingClientRect().top;
+
+if(position < window.innerHeight - 100){
+event.classList.add("show");
+}
+
+});
+
+});
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Anii 80</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Acasă</a>
+<a href="60s.html">Anii 60</a>
+<a href="70s.html">Anii 70</a>
+<a href="80s.html">Anii 80</a>
+<a href="90s.html">Anii 90</a>
+</nav>
+
+<section class="intro">
+
+<h1>Anii 80</h1>
+
+<h2>Michael Jackson</h2>
+<p>
+Albumul Thriller a redefinit muzica pop și cultura videoclipurilor
+muzicale, transformându-l pe Michael Jackson într-un fenomen global.
+</p>
+
+<h2>Madonna</h2>
+<p>
+Madonna a devenit simbolul culturii pop prin stilul ei provocator,
+reinventând constant imaginea artistului pop.
+</p>
+
+<h2>Sade</h2>
+<p>
+Sade a adus un stil elegant ce combină soul, jazz și pop,
+creând un sunet sofisticat și distinct.
+</p>
+
+</section>
+
+</body>
+</html>
